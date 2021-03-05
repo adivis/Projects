@@ -1,5 +1,4 @@
 setInterval(()=>{
-    console.log("Hi");
     date = new Date();
     hour_time = date.getHours();
     min_time = date.getMinutes();
@@ -14,5 +13,10 @@ setInterval(()=>{
     document.getElementById("h").firstChild.nodeValue = hour_time;
     document.getElementById("m").firstChild.nodeValue = min_time;
     document.getElementById("s").firstChild.nodeValue = sec_time;
+    console.log(hour_time);
+    if(hour_time>12)
+    document.getElementById("ampm").firstChild.nodeValue = "PM";
+    else
+    document.getElementById("ampm").firstChild.nodeValue = "AM";
 },1000);
 
